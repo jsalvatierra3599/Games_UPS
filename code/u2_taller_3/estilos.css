@@ -1,0 +1,39 @@
+h1 {
+    width: 150px;
+    height: 150px ;
+    color: black;
+    border: 4px solid yellow;
+    top: 40px;
+    left: 10px;
+    text-align: center;
+    margin: 4px;
+}
+
+#container{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin: 8px;
+    width: 1080px;
+    height:600px;
+    border: 1px solid rgb(14, 13, 13);
+    margin-bottom: 50px;
+    background-color: white;
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    text-align: justify;
+    
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+
+#h2 {
+    border-color: blue;
+}
+
+#h3 {
+    border-color: red;
+}
