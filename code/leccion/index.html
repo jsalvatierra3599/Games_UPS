@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo del uso de formularios - aprenderaprogramar.com</title>
+</head>
+<body>
+<form method="get" action="http://aprenderaprogramar.com/accion.php">
+
+    <div class="box">
+        <div class="container-1">
+            <span class="icon"><i class="fa fa-search"></i></span>
+            <input type="search" id="search" placeholder="Search..." />   <input type="submit" value="Buscar" />
+        </div>
+      </div>
+</form>
+</body>
+</html>
+<!--[if lt IE 7]>
+<html class="ie6 lt-ie7 lt-ie8 lt-ie9 no-js" lang="es">
+<![endif]-->
+<!--[if IE 7]>
+<html class="ie7 lt-ie8 lt-ie9 no-js" lang="es">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie8 lt-ie9 no-js" lang="es">
+<![endif]-->
+<!--[if (gte IE 9) | !(IE)  ]><!-->
+<html class="no-js" lang="es">
+    <head>
+        <title>Formulario de contacto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript" src="js/modernizr.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="error"></div>
+            <form id="formulario" name="formulario" method="POST" action="post.php">
+
+                <p>
+                    <label for="nombre">Nombre</label><span class="requerido">:</span>
+                    <input type="text" name="nombre" id="nombre" size="30" required placeholder="Nombre">
+                </p>
+
+                <p class="submit">
+                    <input type="submit" id="submit" value="Eliminar"> <input type="submit" id="submit" value="Editar">
+                </p>
+
+                
+            </form>
+            <!--
+                Aquí pondremos el mensaje cuando enviemos el mensaje
+            -->
+            <div id="correcto"></div>
+        </div>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
