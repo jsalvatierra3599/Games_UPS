@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Random colors</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body id ="bodyId" >
+<Div style="text-align: center; width: 100%;">
+<H1>Generate Random Color using JavaScript/jquery</H1>
+<button onclick="getRandomColor()">Change background color</button>
+</Div>
+
+</body>
+<script>
+   //The ColorCode() will give the code every time.
+   function ColorCode() {
+      var makingColorCode = '0123456789ABCDEF';
+      var finalCode = '#';
+      for (var counter = 0; counter < 6; counter++) {
+         finalCode =finalCode+ makingColorCode[Math.floor(Math.random() * 16)];
+      }
+      return finalCode;
+   }
+   //Function calling on button click.
+   function getRandomColor() {
+      $("#bodyId").css("background-color", ColorCode());
+   }
+</script>
+</html>
