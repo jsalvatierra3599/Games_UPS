@@ -1,0 +1,65 @@
+<html>
+<h2>Filtrando Tabla HTML con JavaScript</h2>
+<form>Busqueda: <input id="txtBusqueda" type="text" onkeyup="Buscar();" /></form>
+<table id="tblPersonas">
+<tbody>
+<tr>
+<th>Persona</th>
+<th>Empresa</th>
+<th>URL</th>
+<th>Accción</th>
+</tr>
+<tr>
+<td>Steve Jobs</td>
+<td>Apple</td>
+<td>https://www.apple.com/</td>
+<td><input type="button" value="Eliminar" /></td>
+</tr>
+<tr class="alt">
+<td>Larry Page</td>
+<td>Google</td>
+<td>https://www.google.com.co</td>
+<td><input type="button" value="Eliminar" /></td>
+</tr>
+<tr>
+<td>Peter Thiel</td>
+<td>PayPal</td>
+<td>https://www.paypal.com</td>
+<td><input type="button" value="Eliminar" /></td>
+</tr>
+<tr class="alt">
+<td>Bill Gates</td>
+<td>Microsoft</td>
+<td>www.microsoft.com</td>
+<td><input type="button" value="Eliminar" /></td>
+</tr>
+</tbody>
+</table>
+<script type="text/javascript">// < ![CDATA[
+function Eliminar (i) {
+    document.getElementsByTagName("table")[0].setAttribute("id","tableid");
+    document.getElementById("tableid").deleteRow(i);
+}
+function Buscar() {
+            var tabla = document.getElementById('tblPersonas');
+            var busqueda = document.getElementById('txtBusqueda').value.toLowerCase();
+            var cellsOfRow="";
+            var found=false;
+            var compareWith="";
+            for (var i = 1; i < tabla.rows.length; i++) {
+                cellsOfRow = tabla.rows[i].getElementsByTagName('td');
+                found = false;
+                for (var j = 0; j < cellsOfRow.length && !found; j++) { compareWith = cellsOfRow[j].innerHTML.toLowerCase(); if (busqueda.length == 0 || (compareWith.indexOf(busqueda) > -1))
+                    {
+                        found = true;
+                    }
+                }
+                if(found)
+                {
+                    tabla.rows[i].style.display = '';
+                } else {
+                    tabla.rows[i].style.display = 'none';
+                }
+            }
+        }
+// ]]></script>
