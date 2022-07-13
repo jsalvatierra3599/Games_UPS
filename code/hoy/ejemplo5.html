@@ -1,0 +1,21 @@
+<!-- abrir una ventana emergente o pop-up cada cierto tiempo -->
+<html>
+    <title>Ejemplo05.html</title>
+    <head>
+        <script>
+            function abrir_ventana()
+            {
+                window.open("http://www.cnice.mec.es/");
+
+            }
+            function parar_abrir()
+            {
+                clearTimeout(pop);
+            }
+            pop = setInterval ("abrir_ventana()",3000);
+        </script>
+    </head>
+    <body>
+        <input type="button" value="Parar de abrir ventanas" onclick="parar_abrir()">
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!-- crear una galeria de imagenes -->
+<html>
+    <title>Ejemplo07.html</title>
+    <head>
+        <script language="javascript">
+            function ver_imagen()
+            {
+                if (document.images)
+                return
+                document.images.img.src=
+                document.imagenes.imagen.options[document.imagenes.imagen.selectedIndex].value
+            }
+        </script>
+        <body>
+            <form name="imagenes">
+                <select name="imagen" size="1" onchange="ver_imagen()">
+                <option>Elige imagen</option>
+                <option value="img\1.jpg">1</option>
+                <option value="img\2.jpg">2</option>
+                <option value="img\3.jpg">3</option>
+                </select>
+            </form>
+            <img src="img\1.jpg" name="img" width="600" height="436" border="3">
+        </body>
+    </head>
+</html>
